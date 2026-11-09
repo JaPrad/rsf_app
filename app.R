@@ -10,11 +10,10 @@ if (!require("pacman")) {
 pacman::p_load(
   shiny,
   here,
-  qs2,
   tidyverse,
   randomForestSRC
 )
-rsf <- qs_read(here("data", "competing_rsf.qs2"))
+rsf <- readRDS(here("data", "competing_rsf.rds"))
 
 religion_choices <- c(
   "Hindu" = "hindu",
